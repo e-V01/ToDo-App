@@ -6,16 +6,35 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ContentView: View {
+    
+    @Environment(\.managedObjectContext) var mOC
+    @State private var showingAddToDoView: Bool = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            List(0 ..< 5) { item in
+            Text("Hella")
+            }
+            .navigationTitle("Todo")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        self.showingAddToDoView.toggle()
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                    .sheet(isPresented: $showingAddToDoView) {
+                        AddToDoView()
+                            .environment(\.managedObjectContext,
+                                          self.mOC)
+                    }
+                }
+            }
         }
-        .padding()
     }
 }
 
