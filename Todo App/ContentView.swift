@@ -11,12 +11,19 @@ import CoreData
 struct ContentView: View {
     
     @Environment(\.managedObjectContext) var mOC
+    @FetchRequest(entity: Todo.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Todo.name, ascending: true)]) var todos: FetchedResults<Todo>
     @State private var showingAddToDoView: Bool = false
     
     var body: some View {
         NavigationStack {
-            List(0 ..< 5) { item in
-            Text("Hella")
+            List {
+                ForEach(self.todos, id: \.self) { todo in
+                    HStack {
+                        Text(todo.name ?? "Empty")
+                        Spacer()
+                        Text(todo.priority ?? "Empty")
+                    }
+                }
             }
             .navigationTitle("Todo")
             .navigationBarTitleDisplayMode(.inline)
