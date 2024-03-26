@@ -41,7 +41,7 @@ struct EmptyListView: View {
             .padding(.horizontal)
             .opacity(isAnimated ? 1 : 0)
             .offset(y: isAnimated ? 0 : -50)
-            .animation(.easeOut(duration: 2),
+            .animation(.easeOut(duration: 1),
                        value: isAnimated)
             .onAppear {
                 
