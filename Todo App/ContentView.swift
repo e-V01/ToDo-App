@@ -24,6 +24,7 @@ struct ContentView: View {
                         Text(todo.priority ?? "Empty")
                     }
                 }
+                .onDelete(perform: deleteTodo)
             }
             .navigationTitle("Todo")
             .navigationBarTitleDisplayMode(.inline)
@@ -40,6 +41,22 @@ struct ContentView: View {
                                           self.mOC)
                     }
                 }
+                ToolbarItem(placement: .topBarLeading) {
+                    EditButton()
+                }
+            }
+        }
+    }
+    
+    private func deleteTodo(at offsets: IndexSet) {
+        for index in offsets {
+            let todo = todos[index]
+            mOC.delete(todo)
+            
+            do {
+                try mOC.save()
+            } catch {
+                print(error)
             }
         }
     }
