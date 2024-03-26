@@ -48,7 +48,7 @@ struct ContentView: View {
             }
                 // NO TODO Items
                 if todos.count == 0 {
-                    EmptyView()
+                    EmptyListView()
                 }
             }
         }
