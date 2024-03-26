@@ -28,9 +28,14 @@ struct AddToDoView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Form {
+                VStack(alignment: .leading, spacing: 20) {
                     TextField("Hella", text: $name)
-                    
+                        .padding()
+                        .background(Color(UIColor.tertiarySystemFill))
+                        .clipShape(RoundedRectangle(cornerRadius: 9))
+                        .font(.system(size: 24,
+                                      weight: .bold,
+                                      design: .default))
                     Picker("Priority", selection: $priority) {
                         ForEach(priorities, id: \.self) {
                             Text($0)
@@ -46,7 +51,7 @@ struct AddToDoView: View {
                             
                             do {
                                 try self.mOC.save()
-                                print("new todo: \(todo.name ?? ""), Priority: \(todo.priority ?? "")")
+//                                print("new todo: \(todo.name ?? ""), Priority: \(todo.priority ?? "")")
                             } catch {
                                 print(error)
                             }
@@ -59,8 +64,18 @@ struct AddToDoView: View {
                         self.pm.wrappedValue.dismiss()
                     } label: {
                         Text("Save")
+                            .font(.system(size: 24, 
+                                          weight: .bold,
+                                          design: .default))
+                            .padding()
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            .background(Color.blue)
+                            .clipShape(RoundedRectangle(cornerRadius: 9))
+                            .foregroundStyle(Color.white)
                     }
                 }
+                .padding(.horizontal)
+                .padding(.vertical, 30)
                 Spacer()
             }
             .navigationTitle("New Todo")
