@@ -8,11 +8,32 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @Environment(\.presentationMode) var pM
     var body: some View {
         NavigationStack {
             VStack(alignment: .center, spacing: 0) {
                 // MARK: - FORM
                 Form {
+                    // MARK: - SECTION 3
+                    Section {
+                        FormRowLinkView(icon: "apple.logo",
+                                        color: Color.black,
+                                        text: "Apple", 
+                                        link: "www.apple.com")
+                        FormRowLinkView(icon: "link",
+                                        color: Color.blue,
+                                        text: "Twitter", 
+                                        link: "www.x.com")
+                        FormRowLinkView(icon: "play.rectangle",
+                                        color: Color.red,
+                                        text: "Youtube", 
+                                        link: "www.youtube.com")
+                        
+                    } header: {
+                        Text("Follow us on social media")
+                    }
+                    .padding(.vertical, 1)
+
                     // MARK: - SECTION 4
                     Section {
                         FormRowStaticView(icon: "gear",
@@ -45,6 +66,15 @@ struct SettingsView: View {
                     .padding(.top, 6)
                     .padding(.bottom, 8)
                     .foregroundStyle(Color.secondary)
+            }
+            .toolbar() {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        self.pM.wrappedValue.dismiss()
+                    } label: {
+                        Image(systemName: "xmark")
+                    }
+                }
             }
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.inline)
