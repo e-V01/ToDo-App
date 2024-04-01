@@ -12,6 +12,7 @@ struct ContentView: View {
     
     @Environment(\.managedObjectContext) var mOC
     @FetchRequest(entity: Todo.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Todo.name, ascending: true)]) var todos: FetchedResults<Todo>
+    @State private var showingSettingsView: Bool = false
     @State private var showingAddToDoView: Bool = false
     @State private var animatingButton: Bool = false
     
@@ -33,14 +34,12 @@ struct ContentView: View {
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {
                         Button {
-                            self.showingAddToDoView.toggle()
+                            self.showingSettingsView.toggle()
                         } label: {
-                            Image(systemName: "plus")
+                            Image(systemName: "paintbrush")
                         }
-                        .sheet(isPresented: $showingAddToDoView) {
-                            AddToDoView()
-                                .environment(\.managedObjectContext,
-                                              self.mOC)
+                        .sheet(isPresented: $showingSettingsView) {
+                            SettingsView()
                         }
                     }
                     ToolbarItem(placement: .topBarLeading) {
