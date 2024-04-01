@@ -27,6 +27,12 @@ struct SettingsView: View {
                                         .scaledToFit()
                                         .frame(width: 44, height: 44)
                                         .clipShape(RoundedRectangle(cornerRadius: 8))
+                                    
+                                    Spacer()
+                                        .frame(width: 8)
+                                    
+                                    Text(self.iconSettings.iconNames[index] ?? "Blue")
+                                        .frame(alignment: .leading)
                                 }
                                 
                                 .padding(3)
@@ -34,6 +40,18 @@ struct SettingsView: View {
                         } label: {
                             Text("App Icons")
                         }
+                        .onReceive([self.iconSettings.currentIndex].publisher.first(), perform: { (value) in
+                            let index = self.iconSettings.iconNames.firstIndex(of: UIApplication.shared.alternateIconName) ?? 0
+                            if index != value {
+                                UIApplication.shared.setAlternateIconName(self.iconSettings.iconNames[value]) { error in
+                                    if let error = error {
+                                        print(error.localizedDescription)
+                                    } else {
+                                        print("Success! You have changed the app icon.")
+                                    }
+                                }
+                            }
+                        })
                         .pickerStyle(.navigationLink)
                     } header: {
                         Text("Choose the app icon")
