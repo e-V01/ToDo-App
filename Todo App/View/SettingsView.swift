@@ -38,7 +38,20 @@ struct SettingsView: View {
                                 .padding(3)
                             }
                         } label: {
-                            Text("App Icons")
+                            HStack {
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 8, style: .continuous)
+                                        .strokeBorder(Color.primary, lineWidth: 2)
+                                    Image(systemName: "paintbrush")
+                                        .font(.system(size: 28, weight: .regular, design: .default))
+                                    .foregroundStyle(Color.primary)
+                                }
+                                .frame(width: 44, height: 44)
+                                
+                                Text("App Icons".uppercased())
+                                    .fontWeight(.bold)
+                                    .foregroundStyle(Color.primary)
+                            }
                         }
                         .onReceive([self.iconSettings.currentIndex].publisher.first(), perform: { (value) in
                             let index = self.iconSettings.iconNames.firstIndex(of: UIApplication.shared.alternateIconName) ?? 0
