@@ -27,6 +27,7 @@
 		9E3448A12BB2206500D9A216 /* Todo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9E34489F2BB2206500D9A216 /* Todo.xcdatamodeld */; };
 		9E3448A32BB2269E00D9A216 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3448A22BB2269E00D9A216 /* Persistence.swift */; };
 		9E42C1752BB2F7EB006BCB16 /* EmptyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E42C1742BB2F7EB006BCB16 /* EmptyListView.swift */; };
+		9EEC6BAE2BBB30F700EE1F59 /* IconNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEC6BAD2BBB30F700EE1F59 /* IconNames.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		9E3448A22BB2269E00D9A216 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		9E42C1722BB2F624006BCB16 /* Todo-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Todo-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		9E42C1742BB2F7EB006BCB16 /* EmptyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListView.swift; sourceTree = "<group>"; };
+		9EEC6BAD2BBB30F700EE1F59 /* IconNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconNames.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				9E42C1722BB2F624006BCB16 /* Todo-App-Info.plist */,
 				9E34488F2BB21D6000D9A216 /* Todo_AppApp.swift */,
 				9E3448A22BB2269E00D9A216 /* Persistence.swift */,
+				9EEC6BAD2BBB30F700EE1F59 /* IconNames.swift */,
 				9E42C1732BB2F7D5006BCB16 /* View */,
 				9E34489F2BB2206500D9A216 /* Todo.xcdatamodeld */,
 				9E3448932BB21D6100D9A216 /* Assets.xcassets */,
@@ -221,6 +224,7 @@
 				9E34489E2BB21D9400D9A216 /* AddToDoView.swift in Sources */,
 				9E3448A12BB2206500D9A216 /* Todo.xcdatamodeld in Sources */,
 				9E3448A32BB2269E00D9A216 /* Persistence.swift in Sources */,
+				9EEC6BAE2BBB30F700EE1F59 /* IconNames.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

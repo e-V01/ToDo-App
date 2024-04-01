@@ -9,11 +9,37 @@ import SwiftUI
 
 struct SettingsView: View {
     @Environment(\.presentationMode) var pM
+    @EnvironmentObject var iconSettings: IconNames
+    
     var body: some View {
         NavigationStack {
             VStack(alignment: .center, spacing: 0) {
                 // MARK: - FORM
                 Form {
+                    // MARK: - SECTION 1
+                    Section {
+                        Picker(selection: $iconSettings.currentIndex) {
+                            ForEach(0..<iconSettings.iconNames.count, id: \.self) { index in
+                                HStack {
+                                    Image(uiImage: UIImage(named: self.iconSettings.iconNames[index] ?? "Blue") ?? UIImage())
+                                        .renderingMode(.original)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 44, height: 44)
+                                        .clipShape(RoundedRectangle(cornerRadius: 8))
+                                }
+                                
+                                .padding(3)
+                            }
+                        } label: {
+                            Text("App Icons")
+                        }
+                        .pickerStyle(.navigationLink)
+                    } header: {
+                        Text("Choose the app icon")
+                    }
+                    .padding(.vertical, 3)
+
                     // MARK: - SECTION 3
                     Section {
                         FormRowLinkView(icon: "apple.logo",
@@ -85,4 +111,5 @@ struct SettingsView: View {
 
 #Preview {
     SettingsView()
+        .environmentObject(IconNames())
 }
