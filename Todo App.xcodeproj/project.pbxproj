@@ -10,6 +10,15 @@
 		9E080F692BBAC607003F6D2E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E080F682BBAC607003F6D2E /* SettingsView.swift */; };
 		9E080F6B2BBAC928003F6D2E /* FormRowStaticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E080F6A2BBAC928003F6D2E /* FormRowStaticView.swift */; };
 		9E080F6D2BBAD3B3003F6D2E /* FormRowLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E080F6C2BBAD3B3003F6D2E /* FormRowLinkView.swift */; };
+		9E080F782BBAD9EB003F6D2E /* Green Dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E080F6F2BBAD9EB003F6D2E /* Green Dark.png */; };
+		9E080F792BBAD9EB003F6D2E /* Green Light.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E080F702BBAD9EB003F6D2E /* Green Light.png */; };
+		9E080F7A2BBAD9EB003F6D2E /* Blue Light.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E080F712BBAD9EB003F6D2E /* Blue Light.png */; };
+		9E080F7B2BBAD9EB003F6D2E /* Blue Dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E080F722BBAD9EB003F6D2E /* Blue Dark.png */; };
+		9E080F7C2BBAD9EB003F6D2E /* Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E080F732BBAD9EB003F6D2E /* Blue.png */; };
+		9E080F7D2BBAD9EB003F6D2E /* Pink Light.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E080F742BBAD9EB003F6D2E /* Pink Light.png */; };
+		9E080F7E2BBAD9EC003F6D2E /* Pink.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E080F752BBAD9EB003F6D2E /* Pink.png */; };
+		9E080F7F2BBAD9EC003F6D2E /* Pink Dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E080F762BBAD9EB003F6D2E /* Pink Dark.png */; };
+		9E080F802BBAD9EC003F6D2E /* Green.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E080F772BBAD9EB003F6D2E /* Green.png */; };
 		9E3448902BB21D6000D9A216 /* Todo_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E34488F2BB21D6000D9A216 /* Todo_AppApp.swift */; };
 		9E3448922BB21D6000D9A216 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3448912BB21D6000D9A216 /* ContentView.swift */; };
 		9E3448942BB21D6100D9A216 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E3448932BB21D6100D9A216 /* Assets.xcassets */; };
@@ -24,6 +33,15 @@
 		9E080F682BBAC607003F6D2E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		9E080F6A2BBAC928003F6D2E /* FormRowStaticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowStaticView.swift; sourceTree = "<group>"; };
 		9E080F6C2BBAD3B3003F6D2E /* FormRowLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowLinkView.swift; sourceTree = "<group>"; };
+		9E080F6F2BBAD9EB003F6D2E /* Green Dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Green Dark.png"; sourceTree = "<group>"; };
+		9E080F702BBAD9EB003F6D2E /* Green Light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Green Light.png"; sourceTree = "<group>"; };
+		9E080F712BBAD9EB003F6D2E /* Blue Light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Blue Light.png"; sourceTree = "<group>"; };
+		9E080F722BBAD9EB003F6D2E /* Blue Dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Blue Dark.png"; sourceTree = "<group>"; };
+		9E080F732BBAD9EB003F6D2E /* Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue.png; sourceTree = "<group>"; };
+		9E080F742BBAD9EB003F6D2E /* Pink Light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pink Light.png"; sourceTree = "<group>"; };
+		9E080F752BBAD9EB003F6D2E /* Pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pink.png; sourceTree = "<group>"; };
+		9E080F762BBAD9EB003F6D2E /* Pink Dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pink Dark.png"; sourceTree = "<group>"; };
+		9E080F772BBAD9EB003F6D2E /* Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Green.png; sourceTree = "<group>"; };
 		9E34488C2BB21D6000D9A216 /* Todo App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E34488F2BB21D6000D9A216 /* Todo_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo_AppApp.swift; sourceTree = "<group>"; };
 		9E3448912BB21D6000D9A216 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -47,6 +65,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E080F6E2BBAD9B2003F6D2E /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				9E080F722BBAD9EB003F6D2E /* Blue Dark.png */,
+				9E080F712BBAD9EB003F6D2E /* Blue Light.png */,
+				9E080F732BBAD9EB003F6D2E /* Blue.png */,
+				9E080F6F2BBAD9EB003F6D2E /* Green Dark.png */,
+				9E080F702BBAD9EB003F6D2E /* Green Light.png */,
+				9E080F772BBAD9EB003F6D2E /* Green.png */,
+				9E080F762BBAD9EB003F6D2E /* Pink Dark.png */,
+				9E080F742BBAD9EB003F6D2E /* Pink Light.png */,
+				9E080F752BBAD9EB003F6D2E /* Pink.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
 		9E3448832BB21D6000D9A216 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +100,7 @@
 		9E34488E2BB21D6000D9A216 /* Todo App */ = {
 			isa = PBXGroup;
 			children = (
+				9E080F6E2BBAD9B2003F6D2E /* Icons */,
 				9E42C1722BB2F624006BCB16 /* Todo-App-Info.plist */,
 				9E34488F2BB21D6000D9A216 /* Todo_AppApp.swift */,
 				9E3448A22BB2269E00D9A216 /* Persistence.swift */,
@@ -156,8 +191,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E080F7E2BBAD9EC003F6D2E /* Pink.png in Resources */,
+				9E080F7B2BBAD9EB003F6D2E /* Blue Dark.png in Resources */,
+				9E080F782BBAD9EB003F6D2E /* Green Dark.png in Resources */,
+				9E080F802BBAD9EC003F6D2E /* Green.png in Resources */,
+				9E080F7C2BBAD9EB003F6D2E /* Blue.png in Resources */,
+				9E080F7F2BBAD9EC003F6D2E /* Pink Dark.png in Resources */,
+				9E080F7D2BBAD9EB003F6D2E /* Pink Light.png in Resources */,
 				9E3448972BB21D6100D9A216 /* Preview Assets.xcassets in Resources */,
 				9E3448942BB21D6100D9A216 /* Assets.xcassets in Resources */,
+				9E080F7A2BBAD9EB003F6D2E /* Blue Light.png in Resources */,
+				9E080F792BBAD9EB003F6D2E /* Green Light.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
