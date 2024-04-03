@@ -28,10 +28,24 @@ struct ContentView: View {
                 List {
                     ForEach(self.todos, id: \.self) { todo in
                         HStack {
+                            Circle()
+                                .frame(width: 12, height: 12, alignment: .center)
+                                .foregroundStyle(self.colorize(priority: todo.priority ?? "Normal"))
                             Text(todo.name ?? "Empty")
+                                .fontWeight(.semibold)
                             Spacer()
                             Text(todo.priority ?? "Empty")
-                        }
+                                .font(.footnote)
+                                .foregroundStyle(Color(UIColor.systemGray2))
+                                .padding(3)
+                                .frame(minWidth: 62)
+                                .overlay {
+                                    Capsule()
+                                        .stroke(Color(UIColor.systemGray2),
+                                                lineWidth: 0.75)
+                                }
+                        } // HStack
+                        .padding(.vertical, 10)
                     }
                     .onDelete(perform: deleteTodo)
                 }
@@ -125,6 +139,19 @@ struct ContentView: View {
             } catch {
                 print(error)
             }
+        }
+    }
+    
+    private func colorize(priority: String) -> Color {
+        switch priority {
+        case "High":
+            return .pink
+        case "Normal":
+            return .green
+        case "Low":
+            return .blue
+        default:
+            return .gray
         }
     }
 }
