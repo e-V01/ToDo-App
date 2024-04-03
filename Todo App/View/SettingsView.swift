@@ -11,6 +11,9 @@ struct SettingsView: View {
     @Environment(\.presentationMode) var pM
     @EnvironmentObject var iconSettings: IconNames
     
+    let themes: [Theme] = themeData
+    @ObservedObject var theme = ThemeSettings()
+    
     var body: some View {
         NavigationStack {
             VStack(alignment: .center, spacing: 0) {

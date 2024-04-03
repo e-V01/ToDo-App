@@ -19,6 +19,9 @@
 		9E080F7E2BBAD9EC003F6D2E /* Pink.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E080F752BBAD9EB003F6D2E /* Pink.png */; };
 		9E080F7F2BBAD9EC003F6D2E /* Pink Dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E080F762BBAD9EB003F6D2E /* Pink Dark.png */; };
 		9E080F802BBAD9EC003F6D2E /* Green.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E080F772BBAD9EB003F6D2E /* Green.png */; };
+		9E30D68C2BBD873A003089CD /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E30D68B2BBD873A003089CD /* ThemeModel.swift */; };
+		9E30D68E2BBD8777003089CD /* ThemeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E30D68D2BBD8777003089CD /* ThemeData.swift */; };
+		9E30D6902BBD87FA003089CD /* ThemeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E30D68F2BBD87FA003089CD /* ThemeSettings.swift */; };
 		9E3448902BB21D6000D9A216 /* Todo_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E34488F2BB21D6000D9A216 /* Todo_AppApp.swift */; };
 		9E3448922BB21D6000D9A216 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3448912BB21D6000D9A216 /* ContentView.swift */; };
 		9E3448942BB21D6100D9A216 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E3448932BB21D6100D9A216 /* Assets.xcassets */; };
@@ -43,6 +46,9 @@
 		9E080F752BBAD9EB003F6D2E /* Pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pink.png; sourceTree = "<group>"; };
 		9E080F762BBAD9EB003F6D2E /* Pink Dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pink Dark.png"; sourceTree = "<group>"; };
 		9E080F772BBAD9EB003F6D2E /* Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Green.png; sourceTree = "<group>"; };
+		9E30D68B2BBD873A003089CD /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
+		9E30D68D2BBD8777003089CD /* ThemeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeData.swift; sourceTree = "<group>"; };
+		9E30D68F2BBD87FA003089CD /* ThemeSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSettings.swift; sourceTree = "<group>"; };
 		9E34488C2BB21D6000D9A216 /* Todo App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Todo App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E34488F2BB21D6000D9A216 /* Todo_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo_AppApp.swift; sourceTree = "<group>"; };
 		9E3448912BB21D6000D9A216 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,6 +89,16 @@
 			path = Icons;
 			sourceTree = "<group>";
 		};
+		9E30D68A2BBD8727003089CD /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				9E30D68B2BBD873A003089CD /* ThemeModel.swift */,
+				9E30D68D2BBD8777003089CD /* ThemeData.swift */,
+				9E30D68F2BBD87FA003089CD /* ThemeSettings.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
 		9E3448832BB21D6000D9A216 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +118,7 @@
 		9E34488E2BB21D6000D9A216 /* Todo App */ = {
 			isa = PBXGroup;
 			children = (
+				9E30D68A2BBD8727003089CD /* Theme */,
 				9E080F6E2BBAD9B2003F6D2E /* Icons */,
 				9E42C1722BB2F624006BCB16 /* Todo-App-Info.plist */,
 				9E34488F2BB21D6000D9A216 /* Todo_AppApp.swift */,
@@ -216,8 +233,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E080F692BBAC607003F6D2E /* SettingsView.swift in Sources */,
+				9E30D6902BBD87FA003089CD /* ThemeSettings.swift in Sources */,
 				9E080F6B2BBAC928003F6D2E /* FormRowStaticView.swift in Sources */,
 				9E080F6D2BBAD3B3003F6D2E /* FormRowLinkView.swift in Sources */,
+				9E30D68E2BBD8777003089CD /* ThemeData.swift in Sources */,
+				9E30D68C2BBD873A003089CD /* ThemeModel.swift in Sources */,
 				9E3448922BB21D6000D9A216 /* ContentView.swift in Sources */,
 				9E3448902BB21D6000D9A216 /* Todo_AppApp.swift in Sources */,
 				9E42C1752BB2F7EB006BCB16 /* EmptyListView.swift in Sources */,
