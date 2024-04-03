@@ -19,7 +19,7 @@ struct ContentView: View {
     @State private var showingAddToDoView: Bool = false
     @State private var animatingButton: Bool = false
     
-    @ObservedObject var theme = ThemeSettings()
+    @ObservedObject var theme = ThemeSettings.shared
     var themes: [Theme] = themeData
     
     var body: some View {
