@@ -74,6 +74,35 @@ struct SettingsView: View {
                     }
                     .padding(.vertical, 3)
 
+                    // MARK: - SECTION 2
+                    Section {
+                        List {
+                            ForEach(themes, id: \.id) { item in
+                                Button {
+                                    self.theme.themeSettings = item.id
+                                    UserDefaults.standard.set(self.theme, forKey: "Theme")
+                                } label: {
+                                    HStack {
+                                        Image(systemName: "circle.fill")
+                                            .foregroundStyle(item.themeColor)
+                                        
+                                        Text(item.themeName)
+                                    } // HStack
+                                } // Button
+                                .tint(Color.primary)
+                            } // ForEach
+                        } // List
+                    } header: {
+                        HStack {
+                            Text("Choose the App theme")
+                            Image(systemName: "circle.fill")
+                                .resizable()
+                                .frame(width: 10, height: 10)
+                                .foregroundStyle(themes[self.theme.themeSettings].themeColor)
+                        }
+                    } // Section 2
+                    .padding(.vertical, 3)
+
                     // MARK: - SECTION 3
                     Section {
                         FormRowLinkView(icon: "apple.logo",
@@ -140,6 +169,7 @@ struct SettingsView: View {
             .navigationBarTitleDisplayMode(.inline)
             .background(Color("ColorBackground").ignoresSafeArea(.all))
         }
+        .tint(themes[self.theme.themeSettings].themeColor)
     }
 }
 

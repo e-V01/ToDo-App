@@ -25,6 +25,10 @@ struct AddToDoView: View {
     @State private var errorShowing: Bool = false
     @State private var errorTitle: String = ""
     @State private var errorMessage: String = ""
+    
+    @ObservedObject var theme = ThemeSettings()
+    var themes: [Theme] = themeData
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -69,7 +73,7 @@ struct AddToDoView: View {
                                           design: .default))
                             .padding()
                             .frame(minWidth: 0, maxWidth: .infinity)
-                            .background(Color.blue)
+                            .background(themes[self.theme.themeSettings].themeColor)
                             .clipShape(RoundedRectangle(cornerRadius: 9))
                             .foregroundStyle(Color.white)
                     }
@@ -95,6 +99,7 @@ struct AddToDoView: View {
                       dismissButton: .default(Text("OK")))
             }
         }
+        .tint(themes[self.theme.themeSettings].themeColor)
     }
 }
 
